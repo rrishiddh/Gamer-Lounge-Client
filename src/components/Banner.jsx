@@ -5,7 +5,7 @@ import img04 from "./../assets/4.jpg";
 
 const Banner = () => {
   return (
-    <div className="mx-auto flex">
+    <div className="mx-auto flex my-8">
       <div className="carousel w-[80%] mx-auto ">
         <div
           id="slide1"
