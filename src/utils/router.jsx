@@ -6,6 +6,10 @@ import AllReviews from "../components/AllReviews";
 import Register from "../components/Register";
 import Login from "../components/Login";
 import AuthLayout from "../components/AuthLayout";
+import PrivateRoute from "./PrivateRoute";
+import MyReview from "../components/MyReview";
+import MyWatchList from "../components/MyWatchList";
+import AddReview from "../components/AddReview";
 
 
 
@@ -18,11 +22,29 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element : <Home></Home>,
-                loader: ()=> fetch('http://localhost:5000/highest_rated_games')
+                loader: ()=> fetch('http://localhost:5000/reviews')
             },
             {
-                path: "/all_reviews",
+                path: "/reviews",
                 element : <AllReviews></AllReviews>,
+            },
+            {
+                path: "/addReview",
+                element : (<PrivateRoute>
+                  <AddReview></AddReview>
+                </PrivateRoute>),
+            },
+            {
+                path: "/myReviews",
+                element : (<PrivateRoute>
+                  <MyReview></MyReview>
+                </PrivateRoute>),
+            },
+            {
+                path: "/myWatchList",
+                element :(<PrivateRoute>
+                  <MyWatchList></MyWatchList>
+                </PrivateRoute>),
             },
             {
                 path: "auth",

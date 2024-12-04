@@ -47,7 +47,7 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/all_reviews">
+                  <NavLink to="/reviews">
                     <img
                       src="https://img.icons8.com/?size=100&id=XskZlykXA2CI&format=png&color=000000"
                       className="w-5 h-5"
@@ -56,7 +56,7 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/add_review">
+                  <NavLink to="/addReview">
                     <img
                       src="https://img.icons8.com/?size=100&id=81464&format=png&color=000000"
                       className="w-5 h-5"
@@ -65,7 +65,7 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/my_reviews">
+                  <NavLink to="/myReviews">
                     <img
                       src="https://img.icons8.com/?size=100&id=DXfrzlXab1ny&format=png&color=000000"
                       className="w-5 h-5"
@@ -74,7 +74,7 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/game_watch_list">
+                  <NavLink to="/myWatchList">
                     <img
                       src="https://img.icons8.com/?size=100&id=tdKUcwrRw4js&format=png&color=000000"
                       className="w-5 h-5"
@@ -108,7 +108,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/all_reviews">
+                <NavLink to="/reviews">
                   <img
                     src="https://img.icons8.com/?size=100&id=XskZlykXA2CI&format=png&color=000000"
                     className="w-5 h-5"
@@ -119,7 +119,7 @@ const Navbar = () => {
 
               {user && user?.email ? (
                 <li>
-                  <NavLink to="/add_review">
+                  <NavLink to="/addReview">
                     <img
                       src="https://img.icons8.com/?size=100&id=81464&format=png&color=000000"
                       className="w-5 h-5"
@@ -132,7 +132,7 @@ const Navbar = () => {
               )}
               {user && user?.email ? (
                 <li>
-                  <NavLink to="/my_reviews">
+                  <NavLink to="/myReviews">
                     <img
                       src="https://img.icons8.com/?size=100&id=DXfrzlXab1ny&format=png&color=000000"
                       className="w-5 h-5"
@@ -145,7 +145,7 @@ const Navbar = () => {
               )}
               {user && user?.email ? (
                 <li>
-                  <NavLink to="/game_watch_list">
+                  <NavLink to="/myWatchList">
                     <img
                       src="https://img.icons8.com/?size=100&id=tdKUcwrRw4js&format=png&color=000000"
                       className="w-5 h-5"

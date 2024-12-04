@@ -12,15 +12,15 @@ const HighestRatedGame = () => {
        highRatedGames.map((game,idx) => <div key={idx} className="card card-compact bg-base-100 shadow-xl p-2">
         <figure className="h-[50%]">
           <img
-            src={game.photo}
-            alt={game.title}
+            src={game.gameThumbnail}
+            alt={game.gameTitle}
             className="w-[50%] h-[90%] object-contain "
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{game.title}</h2>
+          <h2 className="card-title">{game.gameTitle}</h2>
           <p className="font-medium">Rating : {game.rating}</p>
-          <p className="text-sm">{game.details}</p>
+          <p className="text-sm">{game.reviewDescription}</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Explore Details</button>
           </div>

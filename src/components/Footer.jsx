@@ -25,8 +25,8 @@ const Footer = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/add_review">                
-                Add Review
+              <NavLink to="/reviews">                
+                All Review
               </NavLink>
             </li>
           </ul>
