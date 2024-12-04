@@ -3,6 +3,9 @@ import ErrorPage from "../components/ErrorPage";
 import MainLayout from "../components/MainLayout";
 import Home from "../components/Home";
 import AllReviews from "../components/AllReviews";
+import Register from "../components/Register";
+import Login from "../components/Login";
+import AuthLayout from "../components/AuthLayout";
 
 
 
@@ -20,7 +23,21 @@ const router = createBrowserRouter([
             {
                 path: "/all_reviews",
                 element : <AllReviews></AllReviews>,
-            }                 
+            },
+            {
+                path: "auth",
+                element: <AuthLayout></AuthLayout>,
+                children : [
+                  {
+                    path: "/auth/login",
+                    element: <Login></Login>,
+                  },
+                  {
+                    path: "/auth/register",
+                    element: <Register></Register>,
+                  }                 
+                ]
+            },               
         ]
     }
 ])

@@ -1,6 +1,16 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        window.location.href = "/";
+      })
+  };
   return (
     <div>
       <div className="navbar ">
@@ -87,25 +97,27 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal space-x-2 px-1">
-          <>
-                <li>
-                  <NavLink to="/">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=41651&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/all_reviews">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=XskZlykXA2CI&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    All Reviews{" "}
-                  </NavLink>
-                </li>
+            <>
+              <li>
+                <NavLink to="/">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=41651&format=png&color=000000"
+                    className="w-5 h-5"
+                  />
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/all_reviews">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=XskZlykXA2CI&format=png&color=000000"
+                    className="w-5 h-5"
+                  />
+                  All Reviews{" "}
+                </NavLink>
+              </li>
+
+              {user && user?.email ? (
                 <li>
                   <NavLink to="/add_review">
                     <img
@@ -115,6 +127,10 @@ const Navbar = () => {
                     Add Review
                   </NavLink>
                 </li>
+              ) : (
+                ""
+              )}
+              {user && user?.email ? (
                 <li>
                   <NavLink to="/my_reviews">
                     <img
@@ -124,6 +140,10 @@ const Navbar = () => {
                     My Reviews
                   </NavLink>
                 </li>
+              ) : (
+                ""
+              )}
+              {user && user?.email ? (
                 <li>
                   <NavLink to="/game_watch_list">
                     <img
@@ -133,28 +153,38 @@ const Navbar = () => {
                     Game WatchList
                   </NavLink>
                 </li>
-              </>
+              ) : (
+                ""
+              )}
+            </>
           </ul>
         </div>
         <div className="navbar-end space-x-2">
-        
-            {/* <div className="bg-[#c2e9fb] p-2 border border-gray-50 rounded-lg lg:flex lg:space-x-2 items-center">
+          {user && user?.email ? (           
+            <div className="flex items-center space-x-4">
+            <div className="relative group">
               <img
-                src={'/'}
-                className="w-8 h-8 rounded-full mx-auto"
+                src={user?.photoURL}
+                className="w-8 h-8 rounded-full cursor-pointer mx-auto"
               />
-              <p className="font-light text-[12px]">{'/'}</p>
-            </div> */}
-            <Link  className="btn bg-[#c2e9fb]">
-              Login
-            </Link>
-         
-            {/* <button className="btn bg-[#c2e9fb]">
+              <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-max bg-white p-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="text-sm font-semibold">{user?.displayName}</p>
+              </div>
+            </div>
+            <button onClick={handleLogOut} className="btn bg-[#c2e9fb]">
               Logout
-            </button> */}
-            <Link className="btn bg-[#c2e9fb] ">
-              Registration
-            </Link>          
+            </button>
+          </div>
+          ) : (
+            <>
+              <Link to="/auth/login" className="btn bg-[#c2e9fb]">
+                Login
+              </Link>
+              <Link to="/auth/register" className="btn bg-[#c2e9fb]">
+                Registration
+              </Link>
+            </>
+          )}        
         </div>
       </div>
     </div>
