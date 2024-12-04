@@ -1,13 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 
 const ReviewDetails = () => {
   const { user } = useContext(AuthContext);
-
+  const [isDisabled, setIsDisabled] = useState(false);
   const data = useLoaderData();
   const { id } = useParams();
   const selectedGame = data.find((game) => game._id === id);
+  
 
   const handleAddToWatchList = () => {
     const watchListItem = {
@@ -21,6 +22,7 @@ const ReviewDetails = () => {
       userEmail: user.email,
       userName: user.displayName,
     };
+    setIsDisabled(true);
 
     fetch("http://localhost:5000/myWatchList", {
       method: "POST",
@@ -75,7 +77,8 @@ const ReviewDetails = () => {
           </p>
           <div className="card-actions justify-center">
             {user && user?.email ? (
-              <button className="btn btn-sm btn-primary" onClick={handleAddToWatchList}>
+              <button className="btn btn-sm btn-primary"       disabled={isDisabled}
+              onClick={handleAddToWatchList}>
                 Add to WatchList
               </button>
             ) : (

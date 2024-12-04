@@ -65,7 +65,7 @@ const MyReview = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-screen">
       <div className="text-center">
         <h1 className="my-6 text-2xl">Update Your Reviews Here!</h1>
       </div>
