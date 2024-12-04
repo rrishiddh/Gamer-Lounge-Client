@@ -213,6 +213,29 @@ const MyReview = () => {
                 </select>
               </div>
 
+              <div className="form-control">
+                <label>User Email</label>
+                <input
+                  name="email"
+                  type="email"
+                  defaultValue={selectedReview.userEmail}
+                  className="input input-bordered pointer-events-none select-none"
+                  required
+                  readOnly
+                />
+              </div>
+              <div className="form-control">
+                <label>User Name</label>
+                <input
+                  name="name"
+                  type="name"
+                  defaultValue={selectedReview.userName}
+                  className="input input-bordered pointer-events-none select-none"
+                  required
+                  readOnly
+                />
+              </div>
+
               <div className="modal-action">
                 <button type="submit" className="btn btn-primary">
                   Update

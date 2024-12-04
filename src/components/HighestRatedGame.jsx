@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const HighestRatedGame = () => {
   const highRatedGames = useLoaderData();
@@ -21,7 +21,9 @@ const HighestRatedGame = () => {
           <p className="font-medium">Rating : {game.rating}</p>
           <p className="text-sm">{game.reviewDescription}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Explore Details</button>
+          <Link to={`/review/${game._id}`}>
+                <button className="btn btn-primary">Explore Details</button>
+                </Link>
           </div>
         </div>
       </div>)

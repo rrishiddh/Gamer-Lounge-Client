@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import MyReview from "../components/MyReview";
 import MyWatchList from "../components/MyWatchList";
 import AddReview from "../components/AddReview";
+import ReviewDetails from "../components/ReviewDetails";
 
 
 
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
                 loader: ()=> fetch('http://localhost:5000/all_reviews')
 
             },
+            {
+              path: "/review/:id",
+              element : <ReviewDetails></ReviewDetails>,
+              loader: ()=> fetch('http://localhost:5000/all_reviews')
+          },
             {
                 path: "/addReview",
                 element : (<PrivateRoute>
