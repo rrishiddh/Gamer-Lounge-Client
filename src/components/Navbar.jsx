@@ -8,7 +8,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        window.location.href = "/";
+        window.location.href = "/auth/login";
       })
   };
   return (

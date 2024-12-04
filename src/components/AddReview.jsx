@@ -33,7 +33,6 @@ const AddReview = () => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         alert("Review submitted successfully!");
         setFormData({
           gameTitle: "",
@@ -110,7 +109,7 @@ const AddReview = () => {
               <input
                 name="rating"
                 type="number"
-                placeholder="Rating (1-10)"
+                placeholder="rating(1-10)"
                 min="1"
                 max="10"
                 className="input input-bordered"
@@ -128,7 +127,7 @@ const AddReview = () => {
               <input
                 name="year"
                 type="number"
-                placeholder="Year"
+                placeholder="year"
                 className="input input-bordered"
                 value={formData.year}
                 onChange={handleChange}
