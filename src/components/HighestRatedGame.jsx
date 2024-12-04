@@ -2,7 +2,6 @@ import { useLoaderData } from "react-router-dom";
 
 const HighestRatedGame = () => {
   const highRatedGames = useLoaderData();
-  console.log(highRatedGames)
 
   return (
     <div className="my-10">
