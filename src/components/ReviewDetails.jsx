@@ -35,13 +35,17 @@ const ReviewDetails = () => {
       .then((data) => {
         if (data.insertedId) {
           alert("Added to WatchList successfully!");
+        } else if (data.message === "Game already in WatchList") {
+          alert("This game is already in your WatchList.");
         } else {
           alert("Failed to add to WatchList. Try again!");
         }
       })
       .catch((error) => {
-        console.error("Error adding to WatchList:", error);
-        alert("An error occurred while adding to WatchList.");
+        alert("An error occurred while adding to WatchList.",error);
+      })
+      .finally(() => {
+        setIsDisabled(false);
       });
   };
 

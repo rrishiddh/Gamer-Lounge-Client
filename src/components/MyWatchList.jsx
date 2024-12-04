@@ -27,7 +27,7 @@ const MyWatchList = () => {
     setMyWatchList(uniqueWatchList);
   }, [data, currentUserEmail]);
 
- console.log(myWatchList )
+ console.log(data )
  const handleDelete = (id) => {
     if (id) {
       fetch(`http://localhost:5000/myWatchList/${id}`, {
@@ -47,7 +47,8 @@ const MyWatchList = () => {
       <div className="text-center">
         <h1 className="my-6 text-2xl">Find Your WatchList Here!</h1>
       </div>
-      <div className="overflow-x-auto w-[90%] mx-auto">
+
+     { data && data?.length ? (<div className="overflow-x-auto w-[90%] mx-auto">
         <table className="table table-xs table-pin-rows table-pin-cols">
           <thead>
             <tr>
@@ -62,27 +63,29 @@ const MyWatchList = () => {
             </tr>
           </thead>
           <tbody>
-            {myWatchList.map((game, idx) => (
-              <tr key={idx}>
-                <th>{idx + 1}</th>
-                <td>{game.gameTitle}</td>
-                <td>{game.reviewDescription}</td>
-                <td>{game.rating}</td>
-                <td>{game.year}</td>
-                <td>{game.genre}</td>
-                <td className="grid grid-cols-1 gap-2">                 
-                  <button
-                    className="btn btn-sm"
-                    onClick={() => handleDelete(game._id)}
-                  >
-                    <img
-                      src="https://img.icons8.com/?size=100&id=99940&format=png&color=000000"
-                      className="w-3 h-3 rounded-full"
-                    />
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {
+              myWatchList.map((game, idx) => (
+                <tr key={idx}>
+                  <th>{idx + 1}</th>
+                  <td>{game.gameTitle}</td>
+                  <td>{game.reviewDescription}</td>
+                  <td>{game.rating}</td>
+                  <td>{game.year}</td>
+                  <td>{game.genre}</td>
+                  <td className="grid grid-cols-1 gap-2">                 
+                    <button
+                      className="btn btn-sm"
+                      onClick={() => handleDelete(game._id)}
+                    >
+                      <img
+                        src="https://img.icons8.com/?size=100&id=99940&format=png&color=000000"
+                        className="w-3 h-3 rounded-full"
+                      />
+                    </button>
+                  </td>
+                </tr>
+              ))
+            }
           </tbody>
           <tfoot>
             <tr>
@@ -96,7 +99,9 @@ const MyWatchList = () => {
             </tr>
           </tfoot>
         </table>
-      </div>
+      </div>) : (<div className="text-center text-xl text-red-500 py-10">No Data Available, Add WatchList First!</div>)
+     }
+      
     </div>
   );
 };

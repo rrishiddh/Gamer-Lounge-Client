@@ -63,13 +63,12 @@ const MyReview = () => {
         setMyReview(updatedReviews);
       });
   };
-
   return (
     <div className="min-h-screen">
       <div className="text-center">
         <h1 className="my-6 text-2xl">Update Your Reviews Here!</h1>
       </div>
-      <div className="overflow-x-auto w-[90%] mx-auto">
+      { myReview && myReview?.length ? (<div className="overflow-x-auto w-[90%] mx-auto">
         <table className="table table-xs table-pin-rows table-pin-cols">
           <thead>
             <tr>
@@ -136,7 +135,9 @@ const MyReview = () => {
             </tr>
           </tfoot>
         </table>
-      </div>
+      </div>) : (<div className="text-center text-xl text-red-500  py-10 ">No Data Available, Add Review First!</div>)
+      }
+      
       {/* update modal */}
       {selectedReview && (
         <div className="modal modal-open">
