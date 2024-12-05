@@ -1,9 +1,11 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink,useLocation  } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const location = useLocation(); 
+
 
   const handleLogOut = () => {
     logOut()
@@ -81,6 +83,18 @@ const Navbar = () => {
                     />
                     Game WatchList
                   </NavLink>
+                </li>
+                <li>
+                {location.pathname === "/" && (
+            <div className="min-md:hidden mx-auto">
+              Light
+              <input
+                type="checkbox"
+                value="dark"
+                className="toggle theme-controller"
+              />Dark
+            </div>
+          )}
                 </li>
               </>
             </ul>
@@ -160,6 +174,15 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end space-x-2">
+        {location.pathname === "/" && (
+            <div className="max-sm:hidden">
+              <input
+                type="checkbox"
+                value="dark"
+                className="toggle theme-controller"
+              />
+            </div>
+          )}
           {user && user?.email ? (           
             <div className="flex items-center space-x-4">
             <div className="relative group">

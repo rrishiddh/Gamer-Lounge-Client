@@ -14,7 +14,7 @@ const AllReviews = () => {
           {allReview.map((game, idx) => (
             <div
               key={idx}
-              className="card w-[80%] mx-auto bg-base-100 shadow-xl p-2 grid grid-cols-2"
+              className="card w-[70%] mx-auto bg-base-100 shadow-xl p-2 grid grid-cols-2"
             >
               <figure className="w-[50%] mx-auto">
                 <img

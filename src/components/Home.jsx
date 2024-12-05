@@ -3,7 +3,7 @@ import HighestRatedGame from "./HighestRatedGame";
 
 const Home = () => {
     return (
-        <div>
+        <div>            
             <Banner></Banner>
             <HighestRatedGame></HighestRatedGame>
 

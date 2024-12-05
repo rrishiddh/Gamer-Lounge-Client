@@ -142,8 +142,8 @@ const MyReview = () => {
       {selectedReview && (
         <div className="modal modal-open">
           <div className="modal-box">
-            <h3 className="font-bold text-lg">Update Review</h3>
-            <form onSubmit={handleModalSubmit}>
+            <h3 className="font-bold text-center mb-6 text-xl ">Update Review</h3>
+            <form className="grid grid-cols-1 md:grid-cols-2 md:gap-3" onSubmit={handleModalSubmit}>
               <div className="form-control">
                 <label>Game Title</label>
                 <input
@@ -237,7 +237,7 @@ const MyReview = () => {
                 />
               </div>
 
-              <div className="modal-action">
+              <div className="modal-action md:col-span-2">
                 <button type="submit" className="btn btn-primary">
                   Update
                 </button>
