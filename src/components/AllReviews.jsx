@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Slide  } from "react-awesome-reveal";
 
 
 const AllReviews = () => {
@@ -26,6 +27,7 @@ const AllReviews = () => {
 
   return (
     <div className="">
+      <Slide  cascade >
       <div className="my-10">
         <h1 className="text-center text-2xl font-bold my-6">
           {" "}
@@ -87,6 +89,7 @@ const AllReviews = () => {
           ))}
         </div>
       </div>
+      </Slide >
     </div>
   );
 };

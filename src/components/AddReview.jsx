@@ -1,5 +1,8 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "./AuthProvider";
+import { Fade } from "react-awesome-reveal";
+
+
 
 const AddReview = () => {
     const { user } = useContext(AuthContext); 
@@ -47,7 +50,9 @@ const AddReview = () => {
 
 
     return (
-        <div className="min-h-screen flex justify-center items-center">
+      <>
+      <Fade cascade >
+        <div className="min-h-screen flex justify-center items-center">                    
       <div className="card  bg-base-300 md:w-full max-w-[80%] shrink-0 p-10">
         <h2 className="text-2xl font-semibold pt-2 text-center"> Add Review</h2>
         <p className="font-light text-center py-2">Write Something About The Games You Love The Most!</p>
@@ -187,6 +192,8 @@ const AddReview = () => {
         </form>
       </div>
     </div>
+      </Fade>
+    </>
   );
 };
 export default AddReview;

@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import { Zoom  } from "react-awesome-reveal";
 
 const MyWatchList = () => {
   const data = useLoaderData();
@@ -47,7 +48,7 @@ const MyWatchList = () => {
       <div className="text-center">
         <h1 className="my-6 text-2xl">Find Your WatchList Here!</h1>
       </div>
-
+      <Zoom >
      { data && data?.length ? (<div className="overflow-x-auto w-[90%] mx-auto">
         <table className="table table-xs table-pin-rows table-pin-cols">
           <thead>
@@ -101,6 +102,7 @@ const MyWatchList = () => {
         </table>
       </div>) : (<div className="text-center text-xl text-red-500 py-10">No Data Available, Add WatchList First!</div>)
      }
+     </Zoom>
       
     </div>
   );
