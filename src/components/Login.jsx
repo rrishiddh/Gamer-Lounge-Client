@@ -37,9 +37,10 @@ const Login = () => {
 
   
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <div className="card  bg-base-300 md:w-full max-w-lg shrink-0 p-10">
-        <h2 className="text-2xl font-semibold pt-2 text-center">Login To Your Account</h2>
+    <div className="min-h-screen justify-center items-center">
+<h2 className="text-2xl font-semibold  text-center mb-6 ">Login To Your Account</h2>
+      <div className="flex justify-center items-center">
+      <div className="card  bg-base-300 md:w-full max-w-lg shrink-0 px-10 py-6">
         <form onSubmit={handelSubmit} className="card-body">
           <div className="form-control">
             <label className="label">
@@ -80,6 +81,7 @@ const Login = () => {
         <div className="divider">OR</div>
         <button onClick={handelGoogleSignIn} className="btn btn-primary my-4">Sign In With Google</button>
         <p className="text-center font-semibold">Don&apos;t have account? <Link to='/auth/register' className="text-blue-500 underline">Register</Link></p>
+      </div>
       </div>
     </div>
   );

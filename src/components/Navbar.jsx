@@ -190,7 +190,7 @@ const Navbar = () => {
                 data-tooltip-content={user?.displayName}
                 data-tooltip-delay-hide={1000}
               >
-                <img src={user?.photoURL} className="w-12 cursor-pointer" />
+                <img src={user?.photoURL} className="w-12 rounded-full cursor-pointer" />
               </a>
               <Tooltip id="tooltip-anchor-hide" />
               
@@ -200,10 +200,10 @@ const Navbar = () => {
             </div>
           ) : (
             <>
-              <Link to="/auth/login" className="btn bg-[#c2e9fb]">
+              <Link to="/auth/login" className="btn bg-gradient-to-r from-teal-200 to-blue-300 hover:from-pink-300 hover:to-orange-300 ">
                 Login
               </Link>
-              <Link to="/auth/register" className="btn bg-[#c2e9fb]">
+              <Link to="/auth/register" className="btn bg-gradient-to-r from-teal-200 to-blue-300 hover:from-pink-300 hover:to-orange-300">
                 Registration
               </Link>
             </>

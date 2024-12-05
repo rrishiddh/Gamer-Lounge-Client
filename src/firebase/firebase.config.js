@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCLhM2D4Dqbid6TzjdqP9nTrVid4UolQaQ",
-  authDomain: "assignment10-gamerlounge.firebaseapp.com",
-  projectId: "assignment10-gamerlounge",
-  storageBucket: "assignment10-gamerlounge.firebasestorage.app",
-  messagingSenderId: "657738294469",
-  appId: "1:657738294469:web:deb31c51d13f256a9efcac"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

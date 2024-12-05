@@ -69,11 +69,12 @@ const Register = () => {
 
   return (
     <div>
-      <div className="min-h-screen flex justify-center items-center">
-        <div className="card bg-base-300 md:w-full max-w-lg shrink-0 p-10">
-          <h2 className="text-2xl font-semibold pt-2 text-center">
+      <div className="min-h-screen  justify-center items-center">
+      <h2 className="text-2xl font-semibold pt-2 text-center mb-6 ">
             Register Your Account
           </h2>
+          <div className="flex justify-center items-center">
+          <div className="card bg-base-300 md:w-full max-w-lg shrink-0 px-10 py-6">          
           <form onSubmit={handelSubmit} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -150,6 +151,7 @@ const Register = () => {
               Login
             </Link>
           </p>
+        </div>
         </div>
       </div>
     </div>
