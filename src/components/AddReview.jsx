@@ -51,11 +51,14 @@ const AddReview = () => {
 
     return (
       <>
-      <Fade cascade >
-        <div className="min-h-screen flex justify-center items-center">                    
-      <div className="card  bg-base-300 md:w-full max-w-[80%] shrink-0 p-10">
+        <div className="min-h-screen justify-center items-center" >  
         <h2 className="text-2xl font-semibold pt-2 text-center"> Add Review</h2>
-        <p className="font-light text-center py-2">Write Something About The Games You Love The Most!</p>
+        <p className="font-light text-center py-2 mb-6">Write Something About The Games You Love The Most!</p>           
+               <div className="flex justify-center items-center">
+      <div className="card  bg-base-300 md:w-full max-w-[80%] shrink-0 p-10">
+        
+        <Fade cascade >
+
         <form onSubmit={handleSubmit} className="card-body">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -190,9 +193,10 @@ const AddReview = () => {
             </button>
           </div>
         </form>
+        </Fade>
+      </div>
       </div>
     </div>
-      </Fade>
     </>
   );
 };

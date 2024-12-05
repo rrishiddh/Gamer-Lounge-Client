@@ -1,17 +1,16 @@
 import { useContext } from "react";
-import { Link, NavLink,useLocation  } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const location = useLocation(); 
-
+  const location = useLocation();
 
   const handleLogOut = () => {
-    logOut()
-      .then(() => {
-        window.location.href = "/auth/login";
-      })
+    logOut().then(() => {
+      window.location.href = "/auth/login";
+    });
   };
   return (
     <div>
@@ -85,16 +84,17 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                {location.pathname === "/" && (
-            <div className="min-md:hidden mx-auto">
-              Light
-              <input
-                type="checkbox"
-                value="dark"
-                className="toggle theme-controller"
-              />Dark
-            </div>
-          )}
+                  {location.pathname === "/" && (
+                    <div className="min-md:hidden mx-auto">
+                      Light
+                      <input
+                        type="checkbox"
+                        value="dark"
+                        className="toggle theme-controller"
+                      />
+                      Dark
+                    </div>
+                  )}
                 </li>
               </>
             </ul>
@@ -174,7 +174,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end space-x-2">
-        {location.pathname === "/" && (
+          {location.pathname === "/" && (
             <div className="max-sm:hidden">
               <input
                 type="checkbox"
@@ -183,21 +183,21 @@ const Navbar = () => {
               />
             </div>
           )}
-          {user && user?.email ? (           
+          {user && user?.email ? (
             <div className="flex items-center space-x-4">
-            <div className="relative group">
-              <img
-                src={user?.photoURL}
-                className="w-8 h-8 rounded-full cursor-pointer mx-auto"
-              />
-              <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-max bg-white p-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                <p className="text-sm font-semibold">{user?.displayName}</p>
-              </div>
+              <a
+                data-tooltip-id="tooltip-anchor-hide"
+                data-tooltip-content={user?.displayName}
+                data-tooltip-delay-hide={1000}
+              >
+                <img src={user?.photoURL} className="w-12 cursor-pointer" />
+              </a>
+              <Tooltip id="tooltip-anchor-hide" />
+              
+              <button onClick={handleLogOut} className="btn bg-[#c2e9fb]">
+                Logout
+              </button>
             </div>
-            <button onClick={handleLogOut} className="btn bg-[#c2e9fb]">
-              Logout
-            </button>
-          </div>
           ) : (
             <>
               <Link to="/auth/login" className="btn bg-[#c2e9fb]">
@@ -207,7 +207,7 @@ const Navbar = () => {
                 Registration
               </Link>
             </>
-          )}        
+          )}
         </div>
       </div>
     </div>
