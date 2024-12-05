@@ -194,7 +194,7 @@ const Navbar = () => {
               </a>
               <Tooltip id="tooltip-anchor-hide" />
               
-              <button onClick={handleLogOut} className="btn bg-[#c2e9fb]">
+              <button onClick={handleLogOut} className="btn bg-gradient-to-r from-teal-200 to-blue-300 hover:from-pink-300 hover:to-orange-300">
                 Logout
               </button>
             </div>
