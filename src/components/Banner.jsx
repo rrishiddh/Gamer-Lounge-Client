@@ -18,7 +18,7 @@ const Banner = () => {
           <p className="my-auto mx-auto w-[80%] md:col-span-3">
             {" "}
             This open-world action-adventure game lets players roam freely in a
-            fictional city. Set in the fictional state of San-Andreas.Players
+            fictional city. Set in the fictional state of San-Andreas. Players
             can explore the vast city of Los Santos and the surrounding
             countryside.The game features a variety of missions and activities,
             including heists, races, and side quests.
