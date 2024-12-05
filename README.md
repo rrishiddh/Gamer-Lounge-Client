@@ -22,15 +22,15 @@
 - Dynamic Navigation: Context API ensure count and other elements update (specially reviews) in real time.
 - React Routing: Smooth navigation between pages with protected and public route handling.
 - Product Management: Display products dynamically with sorting and filtering options for an optimized shopping experience.
-- Responsive Design: Fully responsive design for optimal usability across all devices.
 
 ### NPM Packages I've Used First Time:
 - React Awesome Reveal : React Awesome Reveal is a versatile and user-friendly React component library that allows to create stunning and dynamic reveal animations for web applications. 
-- React-tooltip : React-Tooltip is a popular and lightweight React library designed to create interactive tooltips that enhance user experience and provide additional information on hover or click. 
+- React-tooltip : React-Tooltip is a popular and lightweight React library designed to create interactive tooltips that enhance user experience and provide additional information on hover or click.
+- React-Iframe : React-Iframe is a simple and efficient React component designed to embed iframes within your React applications. It provides a declarative way to manage iframes, ensuring smooth integration and optimal performance.
 
 ##  Live Link: 
-### 1. Netlify : [Gamer Lounge]()
-### 2. Surge : [Gamer Lounge]()
+### 1. Netlify : [Gamer Lounge](https://gamer-lounge-rrishiddh.netlify.app/)
+### 2. Surge : [Gamer Lounge](https://gamer-lounge-rrishiddh.surge.sh/)
 
 ### 
 

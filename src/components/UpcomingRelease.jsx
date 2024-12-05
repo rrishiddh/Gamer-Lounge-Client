@@ -5,11 +5,10 @@ const UpcomingRelease = () => {
     "https://www.youtube.com/embed/QdBZY2fkU-0?si=6mQ560kxHA1AeTYY";
   return (
     <div className="w-[90%] mx-auto my-8">
-      <div className="hero bg-base-200 min-h-screen rounded-xl px-8">
+      <div className="hero bg-base-200 rounded-xl py-24 px-8">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <Iframe
             url={youtubeUrl}
-            // height="270"
             id="myIframe"
             className="max-w-xl h-48 md:h-72 max-sm:max-w-sm max-sm:mx-auto  rounded-lg shadow-2xl aspect-video "
             display="initial"
