@@ -26,7 +26,7 @@ const ReviewDetails = () => {
     };
     setIsDisabled(true);
 
-    fetch("http://localhost:5000/myWatchList", {
+    fetch("https://gamer-lounge-server-side.vercel.app/myWatchList", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

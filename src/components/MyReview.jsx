@@ -39,7 +39,7 @@ const MyReview = () => {
           icon: "success"
         });
         if (id) {
-          fetch(`http://localhost:5000/all_reviews/${id}`, {
+          fetch(`https://gamer-lounge-server-side.vercel.app/all_reviews/${id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())
@@ -69,7 +69,7 @@ const MyReview = () => {
       genre: e.target.genre.value,
     };
 
-    fetch(`http://localhost:5000/all_reviews/${selectedReview._id}`, {
+    fetch(`https://gamer-lounge-server-side.vercel.app/all_reviews/${selectedReview._id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedReview),

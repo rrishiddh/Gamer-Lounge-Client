@@ -31,7 +31,7 @@ const MyWatchList = () => {
 
  const handleDelete = (id) => {
     if (id) {
-      fetch(`http://localhost:5000/myWatchList/${id}`, {
+      fetch(`https://gamer-lounge-server-side.vercel.app/myWatchList/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
