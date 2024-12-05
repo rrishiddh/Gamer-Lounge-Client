@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import Swal from 'sweetalert2'
+
 
 const Login = () => {
   const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
@@ -17,6 +19,11 @@ const Login = () => {
     .then(result => {
       const user = result.user;
       setUser(user)
+      Swal.fire({
+        title: "Successfully Login!",
+        text: `Welcome ${user.displayName}!`,
+        icon: "success"
+      });
       navigate(location?.state ? location.state : "/") 
     })
     .catch((err)=> {
@@ -29,6 +36,11 @@ const Login = () => {
     .then(result=>{
       const user = result.user;
       setUser(user)
+      Swal.fire({
+        title: "Successfully Login!",
+        text: `Welcome ${user.displayName}!`,
+        icon: "success"
+      });
       navigate(location?.state ? location.state : "/") 
     }).catch((err)=> {
       setError({ ...error, login: err.code })

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 import { Fade } from "react-awesome-reveal";
+import Swal from 'sweetalert2'
 
 
 
@@ -36,7 +37,10 @@ const AddReview = () => {
     })
       .then(res => res.json())
       .then(data => {
-        alert("Review submitted successfully!");
+        Swal.fire({
+          title: "Review Submitted Successfully!",
+          icon: "success"
+        });
         setFormData({
           gameTitle: "",
           gameThumbnail: "",

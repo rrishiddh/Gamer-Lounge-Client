@@ -2,12 +2,13 @@ import { useContext, useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import { Zoom  } from "react-awesome-reveal";
+import Swal from 'sweetalert2';
+
 
 const MyWatchList = () => {
   const data = useLoaderData();
   const [myWatchList, setMyWatchList] = useState([]);
   const { user } = useContext(AuthContext);
-
   const currentUserEmail = user.email;
 
   useEffect(() => {
@@ -28,7 +29,6 @@ const MyWatchList = () => {
     setMyWatchList(uniqueWatchList);
   }, [data, currentUserEmail]);
 
- console.log(data )
  const handleDelete = (id) => {
     if (id) {
       fetch(`http://localhost:5000/myWatchList/${id}`, {
@@ -36,7 +36,11 @@ const MyWatchList = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          alert("WatchList deleted successfully!");
+          Swal.fire({
+            title: "Deleted!",
+            text: "WatchList deleted successfully!",
+            icon: "success"
+          });
           const updatedWatchList = myWatchList.filter((watchList) => id != watchList._id);
           setMyWatchList(updatedWatchList);
         });
@@ -49,7 +53,7 @@ const MyWatchList = () => {
         <h1 className="my-6 text-2xl">Find Your WatchList Here!</h1>
       </div>
       <Zoom >
-     { data && data?.length ? (<div className="overflow-x-auto w-[90%] mx-auto">
+     { myWatchList && myWatchList?.length ? (<div className="overflow-x-auto w-[90%] mx-auto">
         <table className="table table-xs table-pin-rows table-pin-cols">
           <thead>
             <tr>

@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import Swal from 'sweetalert2';
+
 
 const ReviewDetails = () => {
   const { user } = useContext(AuthContext);
@@ -34,15 +36,28 @@ const ReviewDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("Added to WatchList successfully!");
+          Swal.fire({
+            title: "Added to WatchList successfully!",
+            icon: "success"
+          });
+          
         } else if (data.message === "Game already in WatchList") {
-          alert("This game is already in your WatchList.");
+          Swal.fire({
+            title: "This game is already in your WatchList.",
+            icon: "warning"
+          });
         } else {
-          alert("Failed to add to WatchList. Try again!");
+          Swal.fire({
+            title: "Failed to add to WatchList. Try again!",
+            icon: "error"
+          });
         }
       })
       .catch((error) => {
-        alert("An error occurred while adding to WatchList.",error);
+        Swal.fire({
+          title: "An error occurred while adding to WatchList.",
+          icon: "error"
+        });
       })
       .finally(() => {
         setIsDisabled(false);

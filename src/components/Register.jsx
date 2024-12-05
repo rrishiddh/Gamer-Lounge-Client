@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import Swal from 'sweetalert2'
 
 const Register = () => {
   const { setUser, createNewUser, updateUserProfile, signInWithGoogle } =
@@ -28,7 +29,11 @@ const Register = () => {
         setUser(user);
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
-            alert('welcome')
+            Swal.fire({
+              title: "Successfully Register!",
+              text: `Welcome ${user.displayName}!`,
+              icon: "success"
+            });
             navigate("/");
           })
           .catch((err) => {
@@ -46,6 +51,11 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        Swal.fire({
+          title: "Successfully Register!",
+          text: `Welcome ${user.displayName}!`,
+          icon: "success"
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
