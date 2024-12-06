@@ -32,7 +32,7 @@ const UpcomingRelease = () => {
             <p>Story: Dual protagonists, a brother and sister duo (rumored)
             </p>
             </span>
-            <p className="my-3 font-medium">What to Expect: Immerse yourself in a massive, open world teeming with activities and side missions. Engage with a gripping storyline featuring multiple protagonists, brought to life by cutting-edge graphics and realistic visuals. Experience innovative gameplay mechanics and features as you explore a vibrant and diverse city.</p>
+            <p className="my-3 font-medium">What to Expect: Immerse yourself in a massive, open world teeming with activities and side missions. Engage with a gripping storyline featuring multiple protagonists, brought to life by cutting-edge graphics and realistic visuals. Experience innovative game-play mechanics and features as you explore a vibrant and diverse city.</p>
           </div>
         </div>
       </div>

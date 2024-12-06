@@ -1,4 +1,4 @@
-# <img width="30px" src="https://img.icons8.com/?size=100&id=J2AwyRUPwjyg&format=png&color=000000"/> Gamer Lounge✨
+# <img width="30px" src="https://img.icons8.com/?size=100&id=68368&format=png&color=000000"/> Gamer Lounge✨
 
 ## Project Name: Gamer Lounge
 

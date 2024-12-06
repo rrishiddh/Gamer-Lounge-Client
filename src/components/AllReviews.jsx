@@ -13,7 +13,7 @@ const AllReviews = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch("http://localhost:5000/all_reviews");
+        const response = await fetch("https://gamer-lounge-server-side.vercel.app/all_reviews");
         if (!response.ok) {
           throw new Error("Failed to fetch reviews");
         }

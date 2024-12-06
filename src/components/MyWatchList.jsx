@@ -35,7 +35,7 @@ const MyWatchList = () => {
         method: "DELETE",
       })
         .then((res) => res.json())
-        .then((data) => {
+        .then(() => {
           Swal.fire({
             title: "Deleted!",
             text: "WatchList deleted successfully!",
@@ -43,6 +43,7 @@ const MyWatchList = () => {
           });
           const updatedWatchList = myWatchList.filter((watchList) => id != watchList._id);
           setMyWatchList(updatedWatchList);
+          
         });
     }
   };

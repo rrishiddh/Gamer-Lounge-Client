@@ -55,7 +55,7 @@ const ReviewDetails = () => {
       })
       .catch((error) => {
         Swal.fire({
-          title: "An error occurred while adding to WatchList.",
+          title: `An error occurred while adding to WatchList. ${error}`,
           icon: "error"
         });
       })

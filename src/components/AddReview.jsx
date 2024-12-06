@@ -34,7 +34,7 @@ const AddReview = () => {
       body: JSON.stringify(reviewData),
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then(() => {
         Swal.fire({
           title: "Review Submitted Successfully!",
           icon: "success",
