@@ -2,12 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer  text-black items-center p-4">
+    <div className="bg-gradient-to-r from-[#134e5e] to-[#71b280] ">
+      <footer className="footer  text-white items-center p-4">
         <aside className="grid-flow-col max-md:mx-auto items-center">
           <img
             className="w-8 h-8"
-            src="https://img.icons8.com/?size=100&id=J2AwyRUPwjyg&format=png&color=000000"
+            src="https://img.icons8.com/?size=100&id=68368&format=png&color=000000"
             alt=""
           />
           <p>

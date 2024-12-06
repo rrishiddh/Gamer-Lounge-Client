@@ -1,8 +1,8 @@
 import Iframe from "react-iframe";
 
 const UpcomingRelease = () => {
-  const youtubeUrl =
-    "https://www.youtube.com/embed/QdBZY2fkU-0?si=6mQ560kxHA1AeTYY";
+  const youtubeUrl = "https://www.youtube.com/embed/QdBZY2fkU-0?autoplay=1&mute=1&si=6mQ560kxHA1AeTYY";
+
   return (
     <div className="w-[90%] mx-auto my-8">
       <div className="hero bg-base-200 rounded-xl py-24 px-8">
@@ -16,7 +16,7 @@ const UpcomingRelease = () => {
             allowFullScreen
           />
 
-          <div className="" >
+          <div >
             <h1 className="max-sm:mt-6 max-sm:text-center text-4xl max-sm:text-2xl font-bold text-red-400">
               Upcoming Hot Release: <br /> Grand Theft Auto VI
             </h1>

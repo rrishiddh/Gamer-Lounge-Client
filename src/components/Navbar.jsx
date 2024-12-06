@@ -14,7 +14,7 @@ const Navbar = () => {
   };
   return (
     <div>
-      <div className="navbar ">
+      <div className="navbar bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -103,7 +103,7 @@ const Navbar = () => {
           <Link to={"/"} className="btn btn-ghost text-xl">
             <img
               className="w-8 h-8"
-              src="https://img.icons8.com/?size=100&id=J2AwyRUPwjyg&format=png&color=000000"
+              src="https://img.icons8.com/?size=100&id=68368&format=png&color=000000"
               alt=""
             />
             Gamer Lounge

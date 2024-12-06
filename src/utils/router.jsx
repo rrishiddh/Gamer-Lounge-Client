@@ -28,8 +28,6 @@ const router = createBrowserRouter([
             {
                 path: "/reviews",
                 element : <AllReviews></AllReviews>,
-                loader: ()=> fetch('https://gamer-lounge-server-side.vercel.app/all_reviews')
-
             },
             {
               path: "/review/:id",

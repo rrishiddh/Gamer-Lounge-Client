@@ -52,7 +52,7 @@ const Login = () => {
     <div className="min-h-screen justify-center items-center">
 <h2 className="text-2xl font-semibold  text-center mb-6 ">Login To Your Account</h2>
       <div className="flex justify-center items-center">
-      <div className="card  bg-base-300 md:w-full max-w-lg shrink-0 px-10 py-6">
+      <div className="card  bg-base-200 border-2 md:w-full max-w-lg shrink-0 px-10 py-6">
         <form onSubmit={handelSubmit} className="card-body">
           <div className="form-control">
             <label className="label">
@@ -87,7 +87,7 @@ const Login = () => {
               )
             }
           <div className="form-control mt-6">
-            <button className="btn btn-neutral">Login</button>
+            <button className="btn btn-accent">Login</button>
           </div>
         </form>
         <div className="divider">OR</div>

@@ -70,7 +70,7 @@ const ReviewDetails = () => {
       <h1 className="my-6 font-bold text-2xl text-center w-[80%] mx-auto">
         A Page All About Your Favorite Game - {selectedGame.gameTitle}{" "}
       </h1>
-      <div className="card w-[80%] mx-auto bg-base-100 shadow-xl p-2 grid grid-cols-1 ">
+      <div className="card w-[80%] mb-10 mx-auto bg-base-100 shadow-xl p-2 grid grid-cols-1 ">
         <figure className="w-[50%] mx-auto">
           <img
             src={selectedGame.gameThumbnail}
