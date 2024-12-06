@@ -100,14 +100,14 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <a className="btn btn-ghost text-xl">
+          <Link to={"/"} className="btn btn-ghost text-xl">
             <img
               className="w-8 h-8"
               src="https://img.icons8.com/?size=100&id=J2AwyRUPwjyg&format=png&color=000000"
               alt=""
             />
             Gamer Lounge
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal space-x-2 px-1">

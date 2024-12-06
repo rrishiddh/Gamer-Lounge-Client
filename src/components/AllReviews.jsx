@@ -62,13 +62,13 @@ const AllReviews = () => {
           {sortedReviews.map((game, idx) => (
             <div
               key={idx}
-              className="card w-[70%] mx-auto bg-base-100 shadow-xl p-2 grid grid-cols-2"
+              className="card w-[70%] mx-auto bg-base-100 shadow-xl p-2 grid-cols-1 grid md:grid-cols-2"
             >
               <figure className="w-[50%] mx-auto">
                 <img
                   src={game.gameThumbnail}
                   alt={game.gameTitle}
-                  className="w-[50%] h-[90%] rounded-lg object-contain "
+                  className=" max-sm:mt-4 rounded-lg object-contain "
                 />
               </figure>
               <div className="card-body">

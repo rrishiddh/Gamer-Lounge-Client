@@ -5,7 +5,7 @@ const HighestRatedGame = () => {
 
   return (
     <div className="my-10 w-[90%] mx-auto">
-      <h1 className="text-center text-2xl font-bold my-6"> Checkout Some Highest Rated Games :</h1>
+      <h1 className="text-center text-2xl font-bold my-6"> Checkout Some <br className="md:hidden" /> Highest Rated Games :</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {
        highRatedGames.map((game,idx) => <div key={idx} className="card card-compact bg-base-100 shadow-xl p-2">

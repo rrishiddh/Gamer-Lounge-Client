@@ -77,7 +77,8 @@ const MyWatchList = () => {
                   <td>{game.rating}</td>
                   <td>{game.year}</td>
                   <td>{game.genre}</td>
-                  <td className="grid grid-cols-1 gap-2">                 
+                  <td >  
+                    <div className="grid grid-cols-1 gap-2 my-auto">        
                     <button
                       className="btn btn-sm"
                       onClick={() => handleDelete(game._id)}
@@ -87,6 +88,7 @@ const MyWatchList = () => {
                         className="w-3 h-3 rounded-full"
                       />
                     </button>
+                    </div>       
                   </td>
                 </tr>
               ))

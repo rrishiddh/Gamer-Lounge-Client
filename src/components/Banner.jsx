@@ -15,7 +15,7 @@ const Banner = () => {
             src={img01}
             className=" my-auto mx-auto rounded-lg md:col-span-1"
           />
-          <p className="my-auto mx-auto w-[80%] md:col-span-3">
+          <p className="my-auto max-sm:mt-4 mx-auto w-[80%] md:col-span-3">
             {" "}
             This open-world action-adventure game lets players roam freely in a
             fictional city. Set in the fictional state of San-Andreas. Players
@@ -23,7 +23,7 @@ const Banner = () => {
             countryside.The game features a variety of missions and activities,
             including heists, races, and side quests.
           </p>
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide4" className="btn btn-circle">
               ❮
             </a>
@@ -47,7 +47,7 @@ const Banner = () => {
             variety of creatures. The game offers endless possibilities for
             creativity and exploration.
           </p>
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide1" className="btn btn-circle">
               ❮
             </a>
@@ -70,7 +70,7 @@ const Banner = () => {
             der Linde gang. The game features a vast open world, a compelling
             story, and realistic gunplay.
           </p>
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide2" className="btn btn-circle">
               ❮
             </a>
@@ -93,7 +93,7 @@ const Banner = () => {
             single-player campaign. The game features realistic graphics,
             intense action, and a gripping story.{" "}
           </p>
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide3" className="btn btn-circle">
               ❮
             </a>
