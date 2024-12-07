@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     logOut().then(() => {
-      window.location.href = "/auth/login";
+      window.location.href = "/";
     });
   };
   return (
@@ -100,9 +100,9 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <Link to={"/"} className="btn btn-ghost text-xl">
+          <Link to={"/"} className="btn btn-ghost text-xl max-sm:text-base">
             <img
-              className="w-8 h-8"
+              className="w-8 h-8 max-sm:hidden"
               src="https://img.icons8.com/?size=100&id=68368&format=png&color=000000"
               alt=""
             />
@@ -131,8 +131,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
 
-              {user && user?.email ? (
-                <li>
+              <li>
                   <NavLink to="/addReview">
                     <img
                       src="https://img.icons8.com/?size=100&id=81464&format=png&color=000000"
@@ -141,10 +140,6 @@ const Navbar = () => {
                     Add Review
                   </NavLink>
                 </li>
-              ) : (
-                ""
-              )}
-              {user && user?.email ? (
                 <li>
                   <NavLink to="/myReviews">
                     <img
@@ -154,10 +149,6 @@ const Navbar = () => {
                     My Reviews
                   </NavLink>
                 </li>
-              ) : (
-                ""
-              )}
-              {user && user?.email ? (
                 <li>
                   <NavLink to="/myWatchList">
                     <img
@@ -167,9 +158,6 @@ const Navbar = () => {
                     Game WatchList
                   </NavLink>
                 </li>
-              ) : (
-                ""
-              )}
             </>
           </ul>
         </div>
