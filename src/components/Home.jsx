@@ -3,6 +3,7 @@ import GameOnSale from "./GameOnSale";
 import HighestRatedGame from "./HighestRatedGame";
 import { Fade } from "react-awesome-reveal";
 import UpcomingRelease from "./UpcomingRelease";
+import AboutUs from "./AboutUs";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <GameOnSale></GameOnSale>
             <UpcomingRelease></UpcomingRelease>
             <HighestRatedGame></HighestRatedGame>
+            <AboutUs></AboutUs>
             </Fade>           
 
         </div>
