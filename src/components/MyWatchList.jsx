@@ -49,13 +49,13 @@ const MyWatchList = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen my-10">
       <div className="text-center">
-        <h1 className="my-6 text-2xl">Find Your WatchList Here!</h1>
+        <h1 className="my-6 text-3xl tinos">Find Your WatchList Here!</h1>
       </div>
       <Zoom >
-     { myWatchList && myWatchList?.length ? (<div className="overflow-x-auto w-[90%] mx-auto">
-        <table className="table table-xs table-pin-rows table-pin-cols">
+     { myWatchList && myWatchList?.length ? (<div className="overflow-x-auto w-[90%] mx-auto border-2">
+        <table className="table table-xs table-pin-rows table-pin-cols ">
           <thead>
             <tr>
               <th></th>

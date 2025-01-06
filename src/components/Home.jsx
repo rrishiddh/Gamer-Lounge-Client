@@ -4,6 +4,7 @@ import HighestRatedGame from "./HighestRatedGame";
 import { Fade } from "react-awesome-reveal";
 import UpcomingRelease from "./UpcomingRelease";
 import AboutUs from "./AboutUs";
+import NewsLetter from "./NewsLetter";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <UpcomingRelease></UpcomingRelease>
             <HighestRatedGame></HighestRatedGame>
             <AboutUs></AboutUs>
+            <NewsLetter></NewsLetter>
             </Fade>           
 
         </div>

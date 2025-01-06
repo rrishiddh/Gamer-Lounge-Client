@@ -1,22 +1,76 @@
 import { useContext } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLogOut = () => {
     logOut().then(() => {
-      window.location.href = "/";
+      navigate('/');
     });
   };
+  const navOptions =(
+    <>
+    <li>
+      <NavLink to="/" >
+        <img
+          src="https://img.icons8.com/?size=100&id=41651&format=png&color=000000"
+          className="w-5 h-5"
+        />
+       Home
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="/reviews">
+        <img
+          src="https://img.icons8.com/?size=100&id=XskZlykXA2CI&format=png&color=000000"
+          className="w-5 h-5"
+        />
+        All Reviews{" "}
+      </NavLink>
+    </li>
+    {user && user?.email ? (
+      <>
+      <li>
+      <NavLink to="/addReview">
+        <img
+          src="https://img.icons8.com/?size=100&id=81464&format=png&color=000000"
+          className="w-5 h-5"
+        />
+        Add Review
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="/myReviews">
+        <img
+          src="https://img.icons8.com/?size=100&id=DXfrzlXab1ny&format=png&color=000000"
+          className="w-5 h-5"
+        />
+        My Reviews
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="/myWatchList">
+        <img
+          src="https://img.icons8.com/?size=100&id=tdKUcwrRw4js&format=png&color=000000"
+          className="w-5 h-5"
+        />
+        Game WatchList
+      </NavLink>
+    </li>
+    </>
+    ):('') }
+    
+    
+  </>
+  )
   return (
-    <div>
-      <div className="navbar bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white ">
+      <div className="sticky top-0  z-10 max-w-screen-2xl mx-auto bg-opacity-90 navbar bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white  px-5 ">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown text-black">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,72 +89,14 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2  shadow"
+              className="menu menu-sm dropdown-content bg-base-100 text-xs rounded-box z-[1] mt-3 w-52 p-2  shadow"
             >
-              <>
-                <li>
-                  <NavLink to="/">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=41651&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/reviews">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=XskZlykXA2CI&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    All Reviews{" "}
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/addReview">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=81464&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    Add Review
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/myReviews">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=DXfrzlXab1ny&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    My Reviews
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/myWatchList">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=tdKUcwrRw4js&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    Game WatchList
-                  </NavLink>
-                </li>
-                <li>
-                  {location.pathname === "/" && (
-                    <div className="min-md:hidden mx-auto">
-                      Light
-                      <input
-                        type="checkbox"
-                        value="dark"
-                        className="toggle theme-controller"
-                      />
-                      Dark
-                    </div>
-                  )}
-                </li>
-              </>
+             {navOptions}
+      
             </ul>
           </div>
 
-          <Link to={"/"} className="btn btn-ghost text-xl max-sm:text-base">
+          <Link to={"/"} className="btn btn-ghost text-xl max-sm:text-base handlee max-sm:w-[40%]">
             <img
               className="w-8 h-8 max-sm:hidden"
               src="https://img.icons8.com/?size=100&id=68368&format=png&color=000000"
@@ -110,67 +106,13 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal space-x-2 px-1">
-            <>
-              <li>
-                <NavLink to="/">
-                  <img
-                    src="https://img.icons8.com/?size=100&id=41651&format=png&color=000000"
-                    className="w-5 h-5"
-                  />
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/reviews">
-                  <img
-                    src="https://img.icons8.com/?size=100&id=XskZlykXA2CI&format=png&color=000000"
-                    className="w-5 h-5"
-                  />
-                  All Reviews{" "}
-                </NavLink>
-              </li>
+          <ul className="menu menu-horizontal space-x-2 text-xs px-1">
+          {navOptions}
 
-              <li>
-                  <NavLink to="/addReview">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=81464&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    Add Review
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/myReviews">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=DXfrzlXab1ny&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    My Reviews
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/myWatchList">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=tdKUcwrRw4js&format=png&color=000000"
-                      className="w-5 h-5"
-                    />
-                    Game WatchList
-                  </NavLink>
-                </li>
-            </>
           </ul>
         </div>
         <div className="navbar-end space-x-2">
-          {location.pathname === "/" && (
-            <div className="max-sm:hidden">
-              <input
-                type="checkbox"
-                value="dark"
-                className="toggle theme-controller"
-              />
-            </div>
-          )}
+          
           {user && user?.email ? (
             <div className="flex items-center space-x-4">
               <a
@@ -182,23 +124,22 @@ const Navbar = () => {
               </a>
               <Tooltip id="tooltip-anchor-hide" />
               
-              <button onClick={handleLogOut} className="btn bg-gradient-to-r from-teal-200 to-blue-300 hover:from-pink-300 hover:to-orange-300">
+              <button onClick={handleLogOut} className="btn btn-sm bg-gradient-to-r from-teal-200 to-blue-300 hover:from-pink-300 hover:to-orange-300 text-xs">
                 Logout
               </button>
             </div>
           ) : (
             <>
-              <Link to="/auth/login" className="btn bg-gradient-to-r from-teal-200 to-blue-300 hover:from-pink-300 hover:to-orange-300 ">
+              <Link to="/auth/login" className="btn-sm btn bg-gradient-to-r from-teal-200 to-blue-300 hover:from-pink-300 hover:to-orange-300 text-xs">
                 Login
               </Link>
-              <Link to="/auth/register" className="btn bg-gradient-to-r from-teal-200 to-blue-300 hover:from-pink-300 hover:to-orange-300">
+              <Link to="/auth/register" className="btn btn-sm bg-gradient-to-r from-teal-200 to-blue-300 hover:from-pink-300 hover:to-orange-300 text-xs">
                 Registration
               </Link>
             </>
           )}
         </div>
       </div>
-    </div>
   );
 };
 

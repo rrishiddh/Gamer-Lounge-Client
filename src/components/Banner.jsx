@@ -1,108 +1,42 @@
-import img01 from "./../assets/1.jpg";
-import img02 from "./../assets/2.jpg";
-import img03 from "./../assets/3.jpg";
-import img04 from "./../assets/4.jpg";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+
+import img01 from "./../assets/01.png";
+import img02 from "./../assets/02.png";
+import img03 from "./../assets/03.png";
+import img04 from "./../assets/04.png";
 
 const Banner = () => {
   return (
-    <div className="mx-auto flex my-8 w-[80%]">
-      <div className="carousel  ">
-        <div
-          id="slide1"
-          className="carousel-item relative w-full grid grid-cols-1 md:grid-cols-4  "
-        >
-          <img
-            src={img01}
-            className=" my-auto mx-auto rounded-lg md:col-span-1"
-          />
-          <p className="my-auto max-sm:mt-4 mx-auto w-[80%] md:col-span-3">
-            {" "}
-            This open-world action-adventure game lets players roam freely in a
-            fictional city. Set in the fictional state of San-Andreas. Players
-            can explore the vast city of Los Santos and the surrounding
-            countryside.The game features a variety of missions and activities,
-            including heists, races, and side quests.
-          </p>
-          <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide2" className="btn btn-circle">
-              ❯
-            </a>
+    <div className="bg-slate-50 h-[65vh]  md:flex items-center">
+      <Carousel
+        autoFocus
+        autoPlay
+        infiniteLoop={true}
+        emulateTouch={true}
+        showThumbs={false}
+        showStatus={false}
+        showIndicators={false}
+      >
+        {[
+          { img: img01, text: "This open-world action-adventure game lets players roam freely in a fictional city. Set in the fictional state of San-Andreas. Players can explore the vast city of Los Santos and the surrounding countryside." },
+          { img: img02, text: "This sandbox game allows players to build and explore vast worlds. Players can mine resources, build structures, and interact with a variety of creatures. The game offers endless possibilities for creativity and exploration." },
+          { img: img03, text: "This open-world action-adventure game is set in the American Wild West. Players take on the role of Arthur Morgan, a member of the Van der Linde gang. The game features a vast open world, a compelling story, and realistic gunplay." },
+          { img: img04, text: "This first-person shooter game is set in a modern military conflict. Players can engage in intense multiplayer battles or play through a single-player campaign. The game features realistic graphics, intense action, and a gripping story." },
+        ].map(({ img, text }, index) => (
+          <div key={index} className="mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 pt-2 w-[90%]">
+            <figure className="md:h-[70%] max-md:w-[30%] max-md:mx-auto my-auto ">
+              <img
+                src={img}
+                className="my-auto mx-auto rounded-lg md:col-span-1 max-h-full object-contain max-md:h-[50%] max-sm:outline  outline-offset-4 outline-[#71b280]"
+              />
+            </figure>
+            <p className="my-auto mx-auto w-[80%] md:col-span-3 max-md:text-sm text-justify">
+              {text}
+            </p>
           </div>
-        </div>
-
-        <div
-          id="slide2"
-          className="carousel-item relative w-full grid grid-cols-1 md:grid-cols-4  "
-        >
-          <img
-            src={img02}
-            className=" my-auto mx-auto rounded-lg md:col-span-1"
-          />
-          <p className="my-auto mx-auto w-[80%] md:col-span-3">
-            This sandbox game allows players to build and explore vast worlds.
-            Players can mine resources, build structures, and interact with a
-            variety of creatures. The game offers endless possibilities for
-            creativity and exploration.
-          </p>
-          <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide1" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide3" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div
-          id="slide3"
-          className="carousel-item relative w-full grid grid-cols-1 md:grid-cols-4  "
-        >
-          <img
-            src={img03}
-            className=" my-auto mx-auto rounded-lg md:col-span-1"
-          />
-          <p className="my-auto mx-auto w-[80%] md:col-span-3">
-            This open-world action-adventure game is set in the American Wild
-            West. Players take on the role of Arthur Morgan, a member of the Van
-            der Linde gang. The game features a vast open world, a compelling
-            story, and realistic gunplay.
-          </p>
-          <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide2" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide4" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div
-          id="slide4"
-          className="carousel-item relative w-full grid grid-cols-1 md:grid-cols-4  "
-        >
-          <img
-            src={img04}
-            className=" my-auto mx-auto rounded-lg md:col-span-1"
-          />
-          <p className="my-auto mx-auto w-[80%] md:col-span-3">
-            This first-person shooter game is set in a modern military conflict.
-            Players can engage in intense multiplayer battles or play through a
-            single-player campaign. The game features realistic graphics,
-            intense action, and a gripping story.{" "}
-          </p>
-          <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide3" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide1" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-      </div>
+        ))}
+      </Carousel>
     </div>
   );
 };

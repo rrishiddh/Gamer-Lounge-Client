@@ -69,7 +69,7 @@ const MyReview = () => {
       genre: e.target.genre.value,
     };
 
-    fetch(`https://gamer-lounge-server-side.vercel.app/all_reviews/${selectedReview._id}`, {
+    fetch(`https://gamer-lounge-server-side.vercel.app/all_reviews/${selectedReview._id}?email=${user.userEmail}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedReview),
@@ -90,12 +90,12 @@ const MyReview = () => {
       });
   };
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen my-10">
       <div className="text-center">
-        <h1 className="my-6 text-2xl">Update Your Reviews Here!</h1>
+        <h1 className="my-6 text-3xl tinos">Update Your Reviews Here!</h1>
       </div>
       <Zoom >
-      { myReview && myReview?.length ? (<div className="overflow-x-auto w-[90%] mx-auto">
+      { myReview && myReview?.length ? (<div className="overflow-x-auto w-[90%] mx-auto border-2">
         <table className="table table-xs table-pin-rows table-pin-cols">
           <thead>
             <tr>

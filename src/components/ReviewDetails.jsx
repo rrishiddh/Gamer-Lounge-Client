@@ -67,32 +67,33 @@ const ReviewDetails = () => {
 
   return (
     <div>
+      
+      <div className="card w-[80%] my-10 mx-auto bg-slate-100 shadow-xl p-2 grid grid-cols-1 ">
       <h1 className="my-6 font-bold text-2xl text-center w-[80%] mx-auto">
         A Page All About Your Favorite Game - {selectedGame.gameTitle}{" "}
       </h1>
-      <div className="card w-[80%] mb-10 mx-auto bg-base-100 shadow-xl p-2 grid grid-cols-1 ">
-        <figure className="w-[50%] mx-auto">
+        <figure className="mx-auto">
           <img
             src={selectedGame.gameThumbnail}
             alt={selectedGame.gameTitle}
-            className="w-[50%] h-[100%] rounded-xl object-contain "
+            className=" rounded-xl object-contain "
           />
         </figure>
-        <div className="card-body text-center">
-          <h2 className="text-center font-bold text-xl">
+        <div className="card-body  text-justify">
+          <h2 className=" font-bold text-xl">
             {selectedGame.gameTitle}
           </h2>
-          <p className="font-medium">Rating : {selectedGame.rating}</p>
+          <p className="text-sm font-medium">Rating : {selectedGame.rating}/10</p>
           <p className="text-sm font-medium">Genre : {selectedGame.genre}</p>
           <p className="text-sm font-medium">
             Releasing Year : {selectedGame.year}
           </p>
-          <p className="text-sm font-light">{selectedGame.reviewDescription}</p>
+          <p className="text-sm font-medium">Description : {selectedGame.reviewDescription}</p>
           <p className="text-sm font-medium italic">
-            Reviewed By : {selectedGame.userName}
+            Reviewed By : <span className=" text-sky-500">{selectedGame.userName}</span>
           </p>
           <p className="text-sm font-medium italic">
-            Reviewer Email : {selectedGame.userEmail}
+            Reviewer Email : <span className="underline text-sky-500">{selectedGame.userEmail}</span>
           </p>
           <div className="card-actions justify-center">
             {user && user?.email ? (
@@ -101,7 +102,7 @@ const ReviewDetails = () => {
                 Add to WatchList
               </button>
             ) : (
-                <p className="text-sm italic">Please log in to add to WatchList</p>
+                <p className="text-sm italic text-center">Please log in to add to WatchList</p>
             )}
           </div>
         </div>
