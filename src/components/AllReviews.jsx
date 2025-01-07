@@ -89,8 +89,8 @@ const AllReviews = () => {
              
                 {filteredReviews.map((game, idx) => (
                    <motion.div
-                   whileHover={{ scale: 1.05 }}
-                   whileTap={{ scale: 0.9 }}
+                   whileHover={{ scale: 1.01 }}
+                   whileTap={{ scale: 0.99 }}
                    key={idx}
                             className="card  mx-auto bg-slate-50 shadow-xl p-2 grid-cols-1 grid "
                  >

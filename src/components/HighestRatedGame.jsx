@@ -17,8 +17,8 @@ const HighestRatedGame = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {highRatedGames.map((game, idx) => (
            <motion.div
-           whileHover={{ scale: 1.05 }}
-           whileTap={{ scale: 0.9 }}
+           whileHover={{ scale: 1.01 }}
+           whileTap={{ scale: 0.99 }}
            key={idx} className="card card-compact max-sm:w-[80%] max-sm:mx-auto bg-white shadow-xl p-2"
          >
          
