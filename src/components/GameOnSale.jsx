@@ -1,9 +1,23 @@
 import Marquee from "react-fast-marquee";
+import { Typewriter } from 'react-simple-typewriter'
 
 const GameOnSale = () => {
   return (
     <div className="my-8">
-      <h1 className=" font-bold text-2xl text-center tinos">Find Out Game Deals Are Going On: </h1>
+       <h1 className=" font-bold text-2xl text-center tinos" >
+       Find Out {' '}
+          <Typewriter
+            words={['Game Deals Are Going On!', 'Best Deals Are Waiting For You!', 'The Latest Games Released!', 'Best Reviewed Games!']}
+            loop={0}
+            cursor
+            cursorBlinking
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+      </h1>
+
       <div  className="w-[96%] mx-auto">
       <Marquee pauseOnClick  autoFill>
         <div className="my-10">

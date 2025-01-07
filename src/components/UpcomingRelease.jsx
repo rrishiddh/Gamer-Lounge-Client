@@ -4,7 +4,7 @@ const UpcomingRelease = () => {
   const youtubeUrl = "https://www.youtube.com/embed/QdBZY2fkU-0?autoplay=1&mute=1&si=6mQ560kxHA1AeTYY";
 
   return (
-    <div className=" bg-slate-50  my-8">
+    <div className="   my-8">
       <div className="hero w-[90%] mx-auto rounded-xl p-10">
         <div className="hero-content grid grid-cols-1 md:grid-cols-2 gap-10">
           <Iframe

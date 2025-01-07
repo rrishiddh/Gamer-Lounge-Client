@@ -87,7 +87,7 @@ const Register = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center">
           <img src={register} className="w-[70%] mx-auto my-auto"></img>
 
-          <div className="card card-compact bg-slate-50 border-2 w-[70%] max-sm:mx-auto shrink-0 p-6">
+          <div className="card card-compact bg-slate-100 border-2 w-[70%] max-sm:mx-auto shrink-0 p-6">
             <form onSubmit={handelSubmit} className="card-body">
               <div className="form-control">
                 <label className="label">

@@ -2,7 +2,7 @@ import { Slide } from "react-awesome-reveal";
 
 const AboutUs = () => {
   return (
-    <div  className="mt-8 bg-slate-50 px-6" >
+    <div  className="mt-8 px-6" >
       <Slide cascade>
         <div id="about" className="   py-8 md:w-[90%] mx-auto">
           <h2 className="text-3xl tinos font-bold text-center mb-6">About Us</h2>

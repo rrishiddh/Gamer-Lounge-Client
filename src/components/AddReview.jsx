@@ -58,7 +58,7 @@ const AddReview = () => {
           Write Something About The Games You Love The Most!
         </p>
         <div className="flex justify-center text-center items-center">
-          <div className="card  bg-slate-50  border-2 w-full  shrink-0 p-10">
+          <div className="card  bg-slate-100  border-2 w-full  shrink-0 p-10">
             <Fade cascade>
               <form onSubmit={handleSubmit} className="card-body">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

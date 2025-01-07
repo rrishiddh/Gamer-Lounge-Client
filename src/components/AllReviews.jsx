@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { Slide } from "react-awesome-reveal";
 import { Rating } from "@smastrom/react-rating";
 import { motion } from "motion/react";
+import { Typewriter } from 'react-simple-typewriter'
+
 
 
 import "@smastrom/react-rating/style.css";
@@ -54,15 +56,25 @@ const AllReviews = () => {
         <div className="">
           <Slide cascade>
             <div className="my-10">
-              <h1 className="text-center text-3xl font-bold my-6 tinos">
-                {" "}
-                Checkout All Review By Our Gamers!
-              </h1>
+              <h1 className="text-center text-3xl font-bold my-6 tinos" >
+              Checkout  {' '}
+                        <Typewriter
+                          words={['All Review By Our Gamers!', 'Best Reviewed Games!', 'The Latest Games Released!']}
+                          loop={0}
+                          cursor
+                          cursorBlinking
+                          typeSpeed={70}
+                          deleteSpeed={50}
+                          delaySpeed={1000}
+                          
+                        />
+                    </h1>
+             
 
               <div className="grid grid-cols-1 md:grid-cols-2  w-[60%]  mx-auto gap-4 justify-center mb-6">
                 <select
                   onChange={(e) => setSortOption(e.target.value)}
-                  className="select select-bordered mx-2 bg-slate-50"
+                  className="select select-bordered mx-2 bg-slate-100"
                 >
                   <option>Sort By :</option>
                   <option value="ratingDesc">ByRating: High to Low</option>
@@ -71,7 +83,7 @@ const AllReviews = () => {
 
                 <select
                   onChange={(e) => setFilterGenre(e.target.value)}
-                  className="select select-bordered mx-2  bg-slate-50"
+                  className="select select-bordered mx-2  bg-slate-100"
                 >
                   <option value="All">All Genres:</option>
                   {allReview.length > 0 &&
@@ -92,7 +104,7 @@ const AllReviews = () => {
                    whileHover={{ scale: 1.01 }}
                    whileTap={{ scale: 0.99 }}
                    key={idx}
-                            className="card  mx-auto bg-slate-50 shadow-xl p-2 grid-cols-1 grid "
+                            className="card  mx-auto bg-slate-100 shadow-xl p-2 grid-cols-1 grid "
                  >
                     <figure className="w-[50%] mx-auto">
                       <img

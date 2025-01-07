@@ -19,7 +19,7 @@ const HighestRatedGame = () => {
            <motion.div
            whileHover={{ scale: 1.01 }}
            whileTap={{ scale: 0.99 }}
-           key={idx} className="card card-compact max-sm:w-[80%] max-sm:mx-auto bg-white shadow-xl p-2"
+           key={idx} className="card card-compact max-sm:w-[80%] max-sm:mx-auto bg-base-300 shadow-xl p-2"
          >
          
             <figure className="h-[50%] ">
@@ -46,7 +46,7 @@ const HighestRatedGame = () => {
 
               <div className="card-actions justify-end">
                 <Link to={`/review/${game._id}`}>
-                  <button className="btn btn-ghost btn-sm bg-gradient-to-r from-[#8ed79f] to-[#71b280]">
+                  <button className="btn dark:text-black btn-ghost btn-sm bg-gradient-to-r from-[#8ed79f] to-[#71b280]">
                     See More..
                   </button>
                 </Link>
