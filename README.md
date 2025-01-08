@@ -64,7 +64,7 @@
 - VITE_projectId='YOUR_FIREBASE_PROJECT_ID'
 - VITE_storageBucket='YOUR_FIREBASE_STORAGE_BUCKET'
 - VITE_messagingSenderId='YOUR_FIREBASE_MESSAGING_SENDER_ID'
-- VITE_appId=1:'YOUR_FIREBASE_APP_ID'
+- VITE_appId='YOUR_FIREBASE_APP_ID'
 
 6. Run 'npm run dev' to run the project locally.
 
