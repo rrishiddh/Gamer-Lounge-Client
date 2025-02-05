@@ -8,6 +8,13 @@
 
 ---
 
+### Main Technology used in this project:
+- Frontend Framework: React is employed to develop a user-friendly game review platform, providing a responsive and engaging interface.
+- Routing: React Router is implemented to enable smooth navigation between different views within the application.
+- State Management: The Context API is utilized to handle global state management across various components.
+- Styling: Tailwind CSS is adopted to ensure a clean and consistent design language throughout the application.
+- Package Management: NPM is employed for efficient management of project dependencies.
+
 ### Purpose:
 
 - The purpose of Gamer Lounge is to create an efficient, scalable, and visually appealing game review platform where users can explore and share experience about game. It is built with modern web technologies, ensuring fast performance and smooth interactivity.
@@ -15,7 +22,7 @@
 
 
 
-### 5 Main Key Features:
+### Main Key Features Of This Project:
 
 - Backend Database Handling: Implement robust CRUD operations on the backend database to manage user data, reviews, and other relevant information. Integrate these operations seamlessly into the frontend to ensure data persistence and synchronization. 
 - User Authentication: Secure user registration and login using Firebase Authentication, with options for email/password and Google sign-in
